@@ -98,18 +98,20 @@ function main_menu:LoadLastSave()
 end
 
 function main_menu:OnButton_last_save()
-	if alife() == nil then
-		self:LoadLastSave()
-		return
+    local console = get_console()
+  
+    local f = getFS()
+	local flist = f:file_list_open_ex("$game_saves$",bit_or(FS.FS_ListFiles,FS.FS_RootOnly),"*.sav")
+	flist:Sort(FS.FS_sort_by_modif_down)
+	local file = flist:GetAt(0)
+	local file_name = string.sub(file:NameFull(), 0, (string.len(file:NameFull()) - 4))
+
+	if (alife() == nil) then
+		console:execute	("disconnect")	
+		console:execute	("start server(" .. file_name .. "/single/alife/load) client(localhost)")	
+	else
+		console:execute	("load ".. file_name)	
 	end
-	local actor = db.actor
-	if actor ~= nil and actor:alive() == false then
-		self:LoadLastSave()
-		return
-	end
-	self.mbox_mode = 1
-	self.message_box:InitMessageBox("message_box_confirm_load_save")
-	self:GetHolder():start_stop_menu(self.message_box, true)
 end
 
 function main_menu:OnButton_credits_clicked()
