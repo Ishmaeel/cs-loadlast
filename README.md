@@ -1,11 +1,11 @@
 # CS LoadLast
-Main menu modification for **S.T.A.L.K.E.R. Clear Sky**
+Main menu modification for [S.T.A.L.K.E.R. Clear Sky](https://en.wikipedia.org/wiki/S.T.A.L.K.E.R.:_Clear_Sky)
 
 This micro mod adds a "**Last Save**" menu item to the top of the main menu, which loads the latest save game. 
 
 *It also probably has a feature that crashes the game nicely when there are no save games present (untested).*
 
-Built upon and probably requires **Sky Reclamation Project (SRP) v1.1.2** community patch.
+Built upon and probably requires [Sky Reclamation Project (SRP) v1.1.2](https://www.moddb.com/mods/srp/downloads/srp-v112) community patch.
 
 Compatibility with vanilla or any other mods have not been tested. It will surely override any other main menu mods if you just copy the files over.
 
