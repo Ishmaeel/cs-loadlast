@@ -10,3 +10,5 @@ Built upon and probably requires [Sky Reclamation Project (SRP) v1.1.2](https://
 Compatibility with vanilla or any other mods have not been tested. It will surely override any other main menu mods if you just copy the files over.
 
 Commit history includes the original (unmodded) files from SRP, so you can see exactly what has been changed and merge the files yourself if need be.
+
+[Download Here](https://github.com/Ishmaeel/cs-loadlast/releases)
